@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 mongoose.connect('mongodb://localhost:27017/nunes_sports', { useUnifiedTopology: true });
 
 
-
+app.use(express.static('static'))
 
 const productSchema = new mongoose.Schema({
   nome: String,

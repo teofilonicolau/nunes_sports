@@ -1,0 +1,4 @@
+# Arquivos do VS Code
+.vscode/
+.devcontainer/
+node_modules/
