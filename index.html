@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nunes Sports - Trabalhe Conosco</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Nunes Sports</h1>
+
+    <button type="button" onclick="addProduct()">Adicionar Produto</button>
+
+    <form class="form" id="form">
+
+        <div class="form-control">
+            <label for="productName">Nome do Produto:</label>
+            <input type="text" id="productName" name="productName" required>
+            <i class="img-success"><img src="./images/success-icon.svg" alt=""></i>
+            <i class="img-error"><img src="./images/error-icon.svg" alt=""></i>
+            <small class="error-message">Error Message</small>
+        </div>
+
+        <div class="form-control">
+            <label for="productCode">Código do Produto:</label>
+            <input type="text" id="productCode" name="productCode" required>
+            <i class="img-success"><img src="./images/success-icon.svg" alt=""></i>
+            <i class="img-error"><img src="./images/error-icon.svg" alt=""></i>
+            <small class="error-message">Error Message</small>
+        </div>
+
+        <div class="form-control">
+            <label for="productDescription">Descrição do Produto:</label>
+            <textarea id="productDescription" name="productDescription" required></textarea>
+            <i class="img-success"><img src="./images/success-icon.svg" alt=""></i>
+            <i class="img-error"><img src="./images/error-icon.svg" alt=""></i>
+            <small class="error-message">Error Message</small>
+        </div>
+
+        <div class="form-control">
+            <label for="productPrice">Preço do Produto:</label>
+            <input type="number" id="productPrice" name="productPrice" required>
+            <i class="img-success"><img src="./images/success-icon.svg" alt=""></i>
+            <i class="img-error"><img src="./images/error-icon.svg" alt=""></i>
+            <small class="error-message">Error Message</small>
+        </div>
+
+        <button type="button" onclick="saveProductChanges()">Salvar Alterações</button>
+    </form>
+</div>
+
+<!-- Modal para editar produtos -->
+<div class="modal" id="editProductModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeEditProductModal()">&times;</span>
+        <h2>Editar Produto</h2>
+        <form id="editProductForm">
+            <label for="productName">Nome do Produto:</label>
+            <input type="text" id="productName" name="productName">
+
+            <label for="productCode">Código do Produto:</label>
+            <input type="text" id="productCode" name="productCode">
+
+            <label for="productDescription">Descrição do Produto:</label>
+            <textarea id="productDescription" name="productDescription"></textarea>
+
+            <label for="productPrice">Preço do Produto:</label>
+            <input type="text" id="productPrice" name="productPrice">
+
+            <button type="button" onclick="saveProductChanges()">Salvar Alterações</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
